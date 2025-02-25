@@ -201,8 +201,12 @@ function playScene(index) {
     currentSceneIndex = index;
     const scene = scenes[index];
 
+    // ファイル名から余分な空白と先頭のコロンを削除
     const cleanFilename = scene.filename.replace(/^[:\s]+/, '').trim();
+    
+    // 動画ファイルに直接アクセス
     const videoUrl = 'http://localhost:8000/' + encodeURIComponent(cleanFilename);
+    console.log('動画URL:', videoUrl);
 
     const frameRate = 29.97;
     const [inHours, inMinutes, inSeconds, inFrames] = scene.inTime.split(':').map(Number);
