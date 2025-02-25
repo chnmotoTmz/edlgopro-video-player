@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-container {
+    width: 80%; /* 画面の80%幅で中央配置 */
+    max-width: 1200px; /* 最大幅を設定 */
+    height: 90vh; /* ビューポートの高さの90% */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 要素を上下に均等配置 */
+    gap: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.edl-section {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.edl-container {
+    margin-bottom: 10px;
+}
+
+#edlInput, #srtInput {
+    margin: 10px 0;
+    display: block;
+    margin: 10px auto;
+}
+
+.video-container {
+    flex: 1; /* ビデオプレーヤーが残りの高さを占める */
+    max-width: 100%;
+    padding: 10px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* ビデオのアスペクト比を維持 */
+}
+
+.scenes-section {
+    flex: 0 0 auto; /* 固定の高さ */
+    max-height: 300px; /* 10行程度の高さを制限（1行約30pxとして計算） */
+    overflow-y: auto; /* 縦スクロールを有効 */
+    margin-top: 10px;
+    border-top: 1px solid #ddd; /* 上部に境界線を追加 */
+}
+
+#sceneTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+#sceneTable th, #sceneTable td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#sceneTable th {
+    background-color: #f5f5f5;
+}
+
+#sceneTable td.subtitle {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 300px;
+    line-height: 1.4;
+    padding: 8px;
+}
+
+.subtitle-entry {
+    margin: 4px 0;
+    padding: 4px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.subtitle-entry:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.play-button {
+    cursor: pointer;
+    padding: 4px 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.play-button:hover {
+    background-color: #45a049;
+}

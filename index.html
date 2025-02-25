@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビデオプレーヤー with EDLプレビュー</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="edl-section">
+            <div class="edl-container">
+                <h2>ファイルを選択</h2>
+                <label for="edlInput">EDLファイル:</label>
+                <input type="file" id="edlInput" accept=".edl,.txt" placeholder="EDLファイルを選択">
+                <label for="srtInput">SRTファイル:</label>
+                <input type="file" id="srtInput" accept=".srt" placeholder="SRTファイルを選択">
+                <div id="edlStatus"></div>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <video controls id="videoPlayer" preload="auto">
+                <source src="" type="video/mp4">
+                お使いのブラウザはビデオタグをサポートしていません。
+            </video>
+        </div>
+
+        <div class="scenes-section">
+            <table id="sceneTable" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>動画ファイル</th>
+                        <th>開始時間</th>
+                        <th>終了時間</th>
+                        <th>台詞</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
